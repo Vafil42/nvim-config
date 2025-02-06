@@ -1,6 +1,6 @@
 # Installation
 
-###Make a backup of your current nvim and shared folder
+### Make a backup of your current nvim and shared folder
 
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
@@ -9,7 +9,7 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
 
-###Clone this repository
+### Clone this repository
 
 With ssh for development
 

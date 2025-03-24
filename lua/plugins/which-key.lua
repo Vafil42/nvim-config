@@ -27,6 +27,36 @@ return {
 					end,
 					desc = "LSP diagnostic",
 				},
+				{
+					"<leader>lj",
+					function()
+						vim.diagnostic.goto_prev()
+					end,
+					desc = "LSP go to prev diagnostic",
+				},
+				{
+					"<leader>lk",
+					function()
+						vim.diagnostic.goto_next()
+					end,
+					desc = "LSP go to next diagnostic",
+				},
+				{
+					"<leader>g",
+					group = "Codeium",
+				},
+				{
+					"<leader>e",
+					group = "Nrepl",
+				},
+        {
+          "<leader>n",
+          group = "NullLs"
+        },
+        {
+          "<leader>o",
+          group = "NeoTree",
+        },
 			})
 		end,
 		keys = {

@@ -3,6 +3,7 @@ local opt = vim.opt
 -- Tabs --
 opt.shiftwidth = 2
 opt.tabstop = 2
+opt.expandtab = true
 opt.smartindent = true
 
 -- Clipboard --
@@ -13,6 +14,4 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Line numbers --
-opt.number = true
 opt.relativenumber = true
-opt.signcolumn = "number"

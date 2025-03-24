@@ -1,3 +1,9 @@
+local defaultFocusOptions = {
+	action = "focus",
+	reveal = true,
+	reveal_force_cwd = true,
+}
+
 return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -19,12 +25,14 @@ return {
 				sources = {
 					"filesystem",
 					"buffers",
+					"git_status",
 				},
 				source_selector = {
 					winbar = true,
 					sources = {
 						{ source = "filesystem" },
 						{ source = "buffers" },
+						{ source = "git_status" },
 					},
 				},
 				window = {
@@ -37,7 +45,7 @@ return {
 				},
 				default_component_configs = {
 					modified = { symbol = "" },
-					git_status = {
+					git_status_status = {
 						symbols = {
 							added = "",
 							modified = "",
@@ -55,13 +63,31 @@ return {
 		end,
 		keys = {
 			{
-				"<leader>o",
+				"<leader>of",
 				function()
-					require("neo-tree.command").execute({
-						action = "focus",
-					})
+					require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
+						source = "filesystem",
+					}))
 				end,
-				desc = "Focus (neo-tree)",
+				desc = "NeoTree focus filesystem",
+			},
+			{
+				"<leader>ob",
+				function()
+					require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
+						source = "buffers",
+					}))
+				end,
+				desc = "NeoTree focus buffers",
+			},
+			{
+				"<leader>og",
+				function()
+					require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
+						source = "git_status",
+					}))
+				end,
+				desc = "NeoTree focus git_status",
 			},
 		},
 	},

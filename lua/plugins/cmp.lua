@@ -70,7 +70,6 @@ return {
 					{ name = "path" },
 					{ name = "luasnip" },
 					{ name = "nvim_lsp_signature_help" },
-				}, {
 					{ name = "buffer" },
 				}),
 				sorting = defaults.sorting,

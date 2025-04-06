@@ -68,6 +68,9 @@ return {
 					require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
 						source = "filesystem",
 					}))
+          require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
+						source = "filesystem",
+					}))
 				end,
 				desc = "NeoTree focus filesystem",
 			},
@@ -77,6 +80,9 @@ return {
 					require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
 						source = "buffers",
 					}))
+          require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
+						source = "buffers",
+					}))
 				end,
 				desc = "NeoTree focus buffers",
 			},
@@ -84,6 +90,9 @@ return {
 				"<leader>og",
 				function()
 					require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
+						source = "git_status",
+					}))
+          require("neo-tree.command").execute(vim.tbl_extend("force", defaultFocusOptions, {
 						source = "git_status",
 					}))
 				end,

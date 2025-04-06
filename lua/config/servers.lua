@@ -9,7 +9,10 @@ local lspServers = {
 	"svelte",
 	"clojure_lsp",
 	"rust_analyzer",
+  "llm-ls"
 }
+
+
 
 local mason_registry = require("mason-registry")
 local lspInitOptions = {
